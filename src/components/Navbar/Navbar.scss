@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.Navbar{
+  background-color: $color-grey;
+
+  &__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
