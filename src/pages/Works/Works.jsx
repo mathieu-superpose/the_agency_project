@@ -1,12 +1,21 @@
 import { Link } from 'react-router-dom';
+import Data from 'components/Data/Data';
 
 const Works = () => {
+  console.log("DATA", Data)
   return(
     <div>
     <h1>Works</h1>
-      <Link to="works/platon-study-case">Platon</Link>
-      <Link to="works/solane-study-case">Solane</Link>
-      <Link to="works/sedal-study-case">Sedal</Link>
+    <ul>
+      {
+        Data.map(page =>
+          <li>
+            <Link to={`works/${page.slug}`}>{page.title}</Link>
+          </li>
+        )
+     }
+   </ul>
+
     </div>
   )
 };
