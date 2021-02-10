@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import ModeContext from 'components/ModeContext/ModeContext';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from 'components/Navbar/Navbar';
@@ -8,7 +8,13 @@ import About from 'pages/About/About';
 import Works from 'pages/Works/Works';
 
 function App() {
-  const [currentState, setCurrentState] = useState('');
+  const [currentState, setCurrentState] = useState(localStorage.getItem("TheAgencyState") || "");
+  const saveState = () => {
+    localStorage.setItem("TheAgencyState",currentState)
+  };
+
+  useEffect(() => {saveState()}, [currentState]);
+
   return (
     <ModeContext.Provider value={{
         currentState,
