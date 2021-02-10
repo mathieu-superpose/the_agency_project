@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import Data from 'components/Data/Data';
 
 const Works = () => {
-  console.log("DATA", Data)
   return(
     <div>
     <h1>Works</h1>
