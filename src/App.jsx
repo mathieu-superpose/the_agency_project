@@ -13,9 +13,9 @@ function App() {
     <ModeContext.Provider value={{
         currentState,
         setDay: () => setCurrentState(''),
-        setNight: () => setCurrentState('&__Dark')
+        setNight: () => setCurrentState('Dark')
       }}>
-      <div className="App">
+      <div className={`App App--${currentState}`}>
         <Router>
         <Navbar />
         <main>
