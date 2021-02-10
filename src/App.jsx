@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ModeContext from 'components/ModeContext/ModeContext';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from 'components/Navbar/Navbar';
@@ -22,26 +22,28 @@ function App() {
         setDay: () => setCurrentState(''),
         setNight: () => setCurrentState('Dark')
       }}>
-      <div className={`App App--${currentState}`}>
-        <Router>
-        <Navbar />
-        <main>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/works" exact>
-              <Works />
-            </Route>
-            <Route path="/works/:slug" exact>
-              <Studycase />
-            </Route>
-          </Switch>
-        </main>
-      </Router>
+      <div className={`App ${currentState}`}>
+        <div className={`App__block ${currentState}`}>
+          <Router>
+            <Navbar />
+            <main>
+              <Switch>
+                <Route path="/" exact>
+                  <Home />
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/works" exact>
+                  <Works />
+                </Route>
+                <Route path="/works/:slug" exact>
+                  <Studycase />
+                </Route>
+              </Switch>
+            </main>
+          </Router>
+        </div>
       </div>
     </ModeContext.Provider>
   );
