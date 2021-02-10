@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const ModeContext = createContext();
+const ModeContext = createContext({ currentMode:'' });
 
 export default ModeContext;

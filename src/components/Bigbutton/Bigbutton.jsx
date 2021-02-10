@@ -1,12 +1,15 @@
 import './Bigbutton.scss';
-import ModeContext from 'components/ModeContext/ModeContext'
+import ModeContext from 'components/ModeContext/ModeContext';
+import { useContext } from 'react';
 
 const Bigbutton = () => {
 
-  const NameContext = createContext(defaultValue);
-
+const currentState = useContext(ModeContext);
   return (
-    <button>Test Bouton</button>
+    <>
+    <button onClick={currentState.setDay}>Test Day</button>
+    <button onClick={currentState.setNight}>Test Night</button>
+  </>
   );
 };
 
