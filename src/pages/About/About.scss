@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.About {
+	min-height: 55vh;
+
+	&__title {
+	  margin-top: 50px;
+	  text-align: justify;
+	}
+	&__text {
+	  margin-top: 50px;
+	  text-align: justify;
+	}
+}

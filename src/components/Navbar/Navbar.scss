@@ -1,43 +1,46 @@
 @import '../../App.scss';
 
 .Navbar {
+  margin-top: 5vh;
+  height: 15vh;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  background-color: grey;
 
-
-  &__left {
+  &__left,
+  &__right {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+  }
+  &__left {
     margin-left: 30px;
-
     &__logo {
-      margin: 5px 15px 15px 15px;
       height: 50px;
       fill-rule: white;
-      align-self: flex-start;
     }
     &__logo a:link,
-    &__logo a:visited {
+    &__logo a:visited,
+    &__title a:link,
+    &__title a:visited {
       color: white;
     }
     &__title {
       font-size: 40px;
+      color: white;
     }
   }
   &__right {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     margin-right: 30px;
-
   }
   &__right a:link,
   &__right a:visited {
     margin: 15px;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
   }
 }

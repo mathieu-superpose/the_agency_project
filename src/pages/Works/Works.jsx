@@ -1,3 +1,4 @@
+import './Works.scss';
 import { Link } from 'react-router-dom';
 import Data from 'components/Data/Data';
 import ModeContext from 'components/ModeContext/ModeContext';
