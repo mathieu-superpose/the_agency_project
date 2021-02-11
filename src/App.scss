@@ -10,12 +10,24 @@ $color-light-grad2: #fda085;
 $color-dark-grad1: #00010D;
 $color-dark-grad2: #1F2245;
 
+@font-face {
+  font-family: 'Halibut';
+  src: local('MyFont'), url(./fonts/HalibutSerif-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'HalibutCondensed';
+  src: local('MyFont'), url(./fonts/HalibutSerif-Condensed.woff2) format('woff2');
+}
+
 * {
   margin: 0;
-  font-family: "Century Gothic";
+  font-family: 'Halibut';
 }
 a:link, a:visited {
   text-decoration: none;
+}
+p {
+  line-height: 1.6;
 }
 .App {
   background: linear-gradient(120deg, $color-light-grad1 0%, $color-light-grad2 100%);
@@ -35,7 +47,8 @@ a:link, a:visited {
 }
 .About,
 .Home,
-.Works {
+.Works,
+.Studycase {
   min-height: 65vh;
   background-color: $color-lite-bg;
   padding: 5vh;
