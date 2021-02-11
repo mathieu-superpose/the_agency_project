@@ -4,7 +4,7 @@ Dummy web agency website coded with React.
 Developped in two days for THP Next bootcamp 2021
 
 <p align="center">
-  <img alt="The Agency logo" src="./public/theagency.png"/>
+  <img alt="The Agency logo" src="./public/theagency.jpg"/>
 </p>
 
 ## Tech
