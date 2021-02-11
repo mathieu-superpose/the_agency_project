@@ -2,7 +2,14 @@
 
 
 .Footer {
-	height: 15vh;
+	height: 10vh;
 	background-color: grey;
-	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__text {
+	  color: white;
+	  font-size: 12px;
+	}
 }

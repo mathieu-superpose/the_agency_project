@@ -11,7 +11,7 @@ const currentState = useContext(ModeContext);
 
   return (
     <nav className="Footer">
-      
+      <p className="Footer__text">THP Next 2021</p>
     </nav>
   );
 };
