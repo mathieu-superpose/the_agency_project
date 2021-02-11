@@ -20,8 +20,7 @@ function App() {
   return (
     <ModeContext.Provider value={{
         currentState,
-        setDay: () => setCurrentState(''),
-        setNight: () => setCurrentState('Dark')
+        setDayNight: () => currentState==='Dark' ? setCurrentState('') : setCurrentState('Dark')
       }}>
       <div className={`App ${currentState}`}>
         <div className={`App__block ${currentState}`}>
