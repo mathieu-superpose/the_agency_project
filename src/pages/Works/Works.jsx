@@ -6,7 +6,7 @@ import WorkCard from 'components/WorkCard/WorkCard'
 const Works = () => {
   return(
     <div className={`Works`}>
-      <h1 className={`Works__title`}>Quelques exemples de nos dernières réalisations:</h1>
+      <h1 className={`Works__title`}>Quelques-unes de nos dernières réalisations:</h1>
       <ul className={`Works__list`}>
       {
         Data.map(page =>
