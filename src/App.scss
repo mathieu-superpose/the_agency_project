@@ -1,12 +1,47 @@
-$color-grey : 	#A8A8A8;
+$color-lite: #A8A8A8;
+$color-lite-bg: #A8A8A8;
 
+$color-dark: #FAFAD2;
+$color-dark-bg: #FAFAD2;
+
+$color-light-grad1: #f6d365;
+$color-light-grad2: #fda085;
+
+$color-dark-grad1: #00010D;
+$color-dark-grad2: #1F2245;
 
 * {
   margin: 0;
+  font-family: "Century Gothic";
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+.App {
+  background: linear-gradient(120deg, $color-light-grad1 0%, $color-light-grad2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__block {
+  width: 70%;
+  max-width: 1000px;
+  }
+}
+.App.Dark {
+  background: linear-gradient(120deg, $color-dark-grad1 100%, $color-dark-grad2 0%);
+  color: $color-dark;
+}
+.About,
+.Home,
+.Works {
+  min-height: 65vh;
+  background-color: $color-lite-bg;
+  padding: 5vh;
 }
 
-.App {
-  min-height: 100vh;
-  text-align: center;
-  &--Dark {background-color: $color-grey };
+.Navbar,
+.Footer {
+    background-color: grey;
 }

@@ -1,8 +1,9 @@
 import './App.scss';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ModeContext from 'components/ModeContext/ModeContext';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from 'components/Navbar/Navbar';
+import Footer from 'components/Footer/Footer';
 import Home from 'pages/Home/Home';
 import About from 'pages/About/About';
 import Works from 'pages/Works/Works';
@@ -19,29 +20,31 @@ function App() {
   return (
     <ModeContext.Provider value={{
         currentState,
-        setDay: () => setCurrentState(''),
-        setNight: () => setCurrentState('Dark')
+        setDayNight: () => currentState==='Dark' ? setCurrentState('') : setCurrentState('Dark')
       }}>
-      <div className={`App App--${currentState}`}>
-        <Router>
-        <Navbar />
-        <main>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/works" exact>
-              <Works />
-            </Route>
-            <Route path="/works/:slug" exact>
-              <Studycase />
-            </Route>
-          </Switch>
-        </main>
-      </Router>
+      <div className={`App ${currentState}`}>
+        <div className={`App__block ${currentState}`}>
+          <Router>
+            <Navbar />
+            <main>
+              <Switch>
+                <Route path="/" exact>
+                  <Home />
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/works" exact>
+                  <Works />
+                </Route>
+                <Route path="/works/:slug" exact>
+                  <Studycase />
+                </Route>
+              </Switch>
+            </main>
+            <Footer />
+          </Router>
+        </div>
       </div>
     </ModeContext.Provider>
   );

@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+
+.Footer {
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0 0 5px 5px;
+
+	&__text {
+	  color: white;
+	  font-size: 12px;
+	}
+}

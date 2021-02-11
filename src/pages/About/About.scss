@@ -1,0 +1,12 @@
+@import '../../App.scss';
+
+.About {
+
+	&__title {
+	  text-align: justify;
+	}
+	&__text {
+	  margin-top: 50px;
+	  text-align: justify;
+	}
+}
