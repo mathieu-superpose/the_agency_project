@@ -1,17 +1,15 @@
 @import '../../App.scss';
 
 .Home {
-	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-  min-height: 60vh;
 
 	&__title {
-	  text-align: center;
+	  
 	}
 	&__text {
-	margin-top: 50px;
+	  margin-top: 50px;
 	}
 	&__catch-text {
 	margin-top: 50px;
@@ -20,9 +18,9 @@
 	}
 	&__cta-button {
 	margin-top: 20px;
-	height: 100px;
+	height: 50px;
 	width: 100px;
-	border-radius: 40%;
+	border-radius: 55px;
 	}
 }
 

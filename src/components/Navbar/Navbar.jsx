@@ -15,17 +15,16 @@ const currentState = useContext(ModeContext);
     <nav className="Navbar">
       <Link to="/">
         <div className="Navbar__left">
-          <img className={`Navbar__left__logo`} src={logo} />
-          <p className="Navbar__left__title">The Agency Project</p>
+          <img className={`Navbar__left__logo ${currentState}`} src={logo} />
+          <p className={`Navbar__left__title ${currentState}`}>The Agency Project</p>
         </div>
       </Link>
       <div className={`Navbar__right ${currentState}`}>
-        <Link to="/about">About</Link>
+        <Link to="/about">L'agence</Link>
         <Link to="/works">Projets</Link>
         <Bigbutton />
         <DayNight />
       </div>
-      
     </nav>
   );
 };
