@@ -11,6 +11,7 @@
 	flex-direction: column;
 	align-items: center;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
 
 	&__stamp-wrap {
 	  background-color: black;
@@ -21,15 +22,6 @@
 
 	  &__stamp {
 	    font-size: 60px;
-	  }
-	}
-	&__stamp-wrap:hover {
-	  background-color: white;
-	  color: black;
-	  
-
-	  &__stamp {
-	    
 	  }
 	}
 }

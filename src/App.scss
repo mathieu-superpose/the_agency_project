@@ -18,6 +18,10 @@ $color-dark-grad2: #1F2245;
   font-family: 'HalibutCondensed';
   src: local('MyFont'), url(./fonts/HalibutSerif-Condensed.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'HalibutExpanded';
+  src: local('MyFont'), url(./fonts/HalibutSerif-Expanded.woff2) format('woff2');
+}
 
 * {
   margin: 0;
@@ -46,12 +50,15 @@ p {
   color: $color-dark;
 }
 .About,
-.Home,
 .Works,
 .Studycase {
   min-height: 65vh;
   background-color: $color-lite-bg;
   padding: 5vh;
+}
+.Home {
+  min-height: 65vh;
+  background-color: $color-lite-bg;
 }
 
 .Navbar,
