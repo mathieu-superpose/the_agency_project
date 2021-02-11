@@ -1,9 +1,13 @@
 @import '../../App.scss';
 
 .About {
-
+	display: flex;
+	flex-direction: column;
 	&__title {
 	  text-align: justify;
+	}
+	&__image {
+	  align-self: center;
 	}
 	&__text {
 	  margin-top: 50px;

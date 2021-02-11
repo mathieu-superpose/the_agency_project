@@ -7,7 +7,7 @@ import Footer from 'components/Footer/Footer';
 import Home from 'pages/Home/Home';
 import About from 'pages/About/About';
 import Works from 'pages/Works/Works';
-import Studycase from 'components/Studycase/Studycase';
+import Studycase from 'pages/Studycase/Studycase';
 
 function App() {
   const [currentState, setCurrentState] = useState(localStorage.getItem("TheAgencyState") || "");
