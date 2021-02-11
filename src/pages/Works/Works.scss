@@ -5,4 +5,15 @@
 	&__title {
 	  
 	}
+	&__list {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	  &__item {
+	    list-style: none;
+	  }
+	}
 }

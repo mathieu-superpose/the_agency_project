@@ -11,7 +11,6 @@ const Navbar = () => {
   const currentState = useContext(ModeContext);
 
   useEffect(() => {
-    console.log(currentState.currentState);
     if (currentState.currentState==='Dark') setToggled(true);
     if (currentState.currentState!=='Dark') setToggled(false);
   }, []);
@@ -30,7 +29,7 @@ const Navbar = () => {
           </Link>
         </div>
       <div className={`Navbar__right ${currentState}`}>
-        <Link to="/about">L'agence</Link>
+        <Link to="/about">L'Agence</Link>
         <Link to="/works">Projets</Link>
       </div>
     </nav>

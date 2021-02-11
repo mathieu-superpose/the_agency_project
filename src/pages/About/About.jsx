@@ -9,7 +9,6 @@ const About = () => {
 	const [img, setImg] = useState();
 
 	useEffect(() => {
-    console.log(currentState.currentState);
     if (currentState.currentState==='Dark') setImg(teamDark);
     if (currentState.currentState!=='Dark') setImg(team);
   }, [currentState.currentState]);

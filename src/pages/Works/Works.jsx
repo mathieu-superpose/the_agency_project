@@ -1,17 +1,17 @@
 import './Works.scss';
-import { Link } from 'react-router-dom';
 import Data from 'components/Data/Data';
 import ModeContext from 'components/ModeContext/ModeContext';
+import WorkCard from 'components/WorkCard/WorkCard'
 
 const Works = () => {
   return(
     <div className={`Works`}>
-      <h1 className={`Works__title`}>Works</h1>
+      <h1 className={`Works__title`}>Quelques exemples de nos dernières réalisations:</h1>
       <ul className={`Works__list`}>
       {
         Data.map(page =>
           <li className={`Works__list__item`}>
-            <Link to={`works/${page.slug}`}>{page.title}</Link>
+            <WorkCard work={page}/>
           </li>
         )
       }
